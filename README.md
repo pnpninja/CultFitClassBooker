@@ -7,7 +7,8 @@ Book your Cult.Fit classes .
 - Get `at` cookie from [Cure.Fit](https://cult.fit/)
 - Save them in `application.properties`
 - Deploy to Heroku
-
+- Don't forget to change `TZ` to `Asia/Colombo` on Heroku
+- Setup a monitor in [Uptime Robot](https://uptimerobot.com/)
 
 ### Development
 
