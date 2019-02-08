@@ -47,7 +47,7 @@ public class ScheduledBookingTask {
 	@Scheduled(cron = "15 0 0 * * ?")
 	public void bookClassesInAdvance() {
 
-		Request request = buildRequestGet(String.format(CultFitURLs.URL_CLASSES_FOR_DEFAULT_CENTER), ConfigUtils.getKey(),
+		Request request = buildRequestGet(CultFitURLs.URL_CLASSES_FOR_DEFAULT_CENTER, ConfigUtils.getKey(),
 				ConfigUtils.getCookie());
 
 		Response response = null;
@@ -220,7 +220,7 @@ public class ScheduledBookingTask {
 	private String prepareFullCondition(String dateStr, List<String> preferredClassTypes, List<String> preferredTimes) {
 		return "$.classByDateList[*].classByTimeList[*].classes[?(@.date=='" + dateStr + "' &&"
 				+ preparePreferredClassesCondition(preferredClassTypes) + "&& "
-				+ preparePreferredTimeCondition(preferredTimes) + " && @.state=='AVAILABLE')]";
+				+ preparePreferredTimeCondition(preferredTimes) + " && (@.state=='AVAILABLE'))]";
 	}
 
 }
