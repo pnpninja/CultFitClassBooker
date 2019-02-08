@@ -58,7 +58,7 @@ public class ScheduledBookingTask {
 			List<String> classIdsOrdered = getIDsOfPreferredClassAndTiming(ConfigUtils.getPreferredClasses(),
 					ConfigUtils.getPreferredTimings(), cultClassesData, ConfigUtils.getBookingDays());
 			logger.info("Calculated Order of ClassIDs - " + classIdsOrdered.toString());
-			if (classIdsOrdered != Collections.EMPTY_LIST) {
+			if (classIdsOrdered!=null && classIdsOrdered != Collections.EMPTY_LIST) {
 				for (String classId : classIdsOrdered) {
 					Request bookRequest = buildRequestPost(String.format(CultFitURLs.URL_BOOK_CLASS, classId),
 							ConfigUtils.getKey(), ConfigUtils.getCookie(), "{}");
