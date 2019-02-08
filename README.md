@@ -4,7 +4,7 @@ Book your Cult.Fit classes .
 
 ### Prerequisites
 - Get `apikey` from any request after you login to [Cure.Fit](https://cult.fit/)
-- Get `at` cookie from [Cure.Fit](https://cult.fit/)
+- Get `at` cookie from [Cure.Fit](https://cult.fit/) (cultfit.cookie=at=<cookie>)
 - Save them in `application.properties`
 - Deploy to Heroku
 - Don't forget to change `TZ` to `Asia/Colombo` on Heroku
