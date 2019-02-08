@@ -47,7 +47,7 @@ public class ScheduledBookingTask {
 	@Scheduled(cron = "15 0 0 * * ?")
 	public void bookClassesInAdvance() {
 
-		Request request = buildRequestGet(String.format(CultFitURLs.URL_CLASSES_FOR_CENTER, 20), ConfigUtils.getKey(),
+		Request request = buildRequestGet(String.format(CultFitURLs.URL_CLASSES_FOR_DEFAULT_CENTER), ConfigUtils.getKey(),
 				ConfigUtils.getCookie());
 
 		Response response = null;
