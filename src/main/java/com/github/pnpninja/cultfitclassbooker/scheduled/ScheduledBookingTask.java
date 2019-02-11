@@ -44,7 +44,7 @@ public class ScheduledBookingTask {
 	private static OkHttpClient client = new OkHttpClient();
 	private static ObjectMapper objectMapper = new ObjectMapper();
 
-	@Scheduled(cron = "15 0 0 * * ?")
+	@Scheduled(cron = "1 0 22 * * ?")
 	public void bookClassesInAdvance() {
 
 		Request request = buildRequestGet(CultFitURLs.URL_CLASSES_FOR_DEFAULT_CENTER, ConfigUtils.getKey(),
