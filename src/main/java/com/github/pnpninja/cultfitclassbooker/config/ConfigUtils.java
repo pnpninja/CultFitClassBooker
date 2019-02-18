@@ -32,4 +32,8 @@ public final class ConfigUtils {
     public static List<String> getPreferredTimings(){
     	return cultFitConfig.getTIME_SLOTS_ORDERED();
     }
+    
+    public static String getCenter() {
+    	return cultFitConfig.getCENTER_ID();
+    }
 }
